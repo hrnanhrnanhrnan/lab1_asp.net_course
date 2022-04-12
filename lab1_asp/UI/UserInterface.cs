@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Data.Handlers;
 using Data.Utilities;
 
@@ -10,7 +8,9 @@ namespace lab1_asp.UI
     {
         ReportHandler _reportHandler = new ReportHandler();
         EmployeeHandler _employeeHandler = new EmployeeHandler();
-        public void RunUserInterface()
+
+        //starting point of the application, runs the start menu
+        internal void RunUserInterface()
         {
             bool run = true;
             Console.WriteLine("------Welcome to the application!------");
@@ -18,7 +18,7 @@ namespace lab1_asp.UI
             Console.ReadLine();
             while (run)
             {
-                string[] menu = new string[] { "Admin", "Employee", "Exit"};
+                string[] menu = new string[] { "Admin menu", "Employee menu", "Exit"};
                 int userChoice = UtilityMethods.DisplayMenuAndGetUserChoice(menu, "Menu choices: ");
                 switch(userChoice)
                 {
@@ -28,7 +28,7 @@ namespace lab1_asp.UI
                         break;
                     case 2:
                         //run employee menu
-                        RunPersonelMenu();
+                        RunEmployeeMenu();
                         break;
                     case 3:
                         //Exit application
@@ -52,10 +52,11 @@ namespace lab1_asp.UI
                 switch (userChoice)
                 {
                     case 1:
-                        //run something to search for employees and see if they have any reported vacations
+                        //runs the search and display employee method from the employee handler class
                         _employeeHandler.SearchAndDisplayEmployee();
                         break;
                     case 2:
+                        //runs the display reports by month method from the report handler class
                         _reportHandler.DisplayReportsByMonth();
                         break;
                     case 3:
@@ -67,8 +68,8 @@ namespace lab1_asp.UI
         }
 
 
-        //Menu for personel, where they can create vacation reports
-        private void RunPersonelMenu()
+        //Menu for employees
+        private void RunEmployeeMenu()
         {
             bool run = true;
             while (run)
@@ -78,7 +79,7 @@ namespace lab1_asp.UI
                 switch (userChoice)
                 {
                     case 1:
-                        //run create vacationreport from the reporthandler
+                        //run create vacationreport method from the reporthandler
                         _reportHandler.CreateVacationReport();
                         break;
                     case 2:

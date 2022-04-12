@@ -11,4 +11,3 @@ C:\Users\hrnan\source\repos\lab1_asp\Data\obj\Debug\netcoreapp3.1\Data.csproj.Co
 C:\Users\hrnan\source\repos\lab1_asp\Data\obj\Debug\netcoreapp3.1\Data.dll
 C:\Users\hrnan\source\repos\lab1_asp\Data\obj\Debug\netcoreapp3.1\Data.pdb
 C:\Users\hrnan\source\repos\lab1_asp\Data\obj\Debug\netcoreapp3.1\Data.genruntimeconfig.cache
-C:\Users\hrnan\source\repos\lab1_asp\Data\bin\Debug\netcoreapp3.1\Data.dll.config

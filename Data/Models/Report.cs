@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 
 namespace Data.Models
 {
@@ -17,10 +15,5 @@ namespace Data.Models
         [Required]
         public int EmployeeId { get; set; }
         public Employee Employee { get; set; }
-
-        public override string ToString()
-        {
-            return $"Employee: {this.Employee.FirstName} {this.Employee.LastName}, TypeOfLeave: {this.TypeOfLeave}, Reported date: {this.ReportDate}, Date: {this.StartDate} - {this.EndDate}";
-        }
     }
 }
