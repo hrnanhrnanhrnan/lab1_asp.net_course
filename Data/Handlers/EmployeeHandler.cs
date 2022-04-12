@@ -25,7 +25,6 @@ namespace Data.Handlers
             using (var context = new EmployeeReportsContext())
             {
                 var queryEmployee = context.Employees.Where(emp => (emp.FirstName.ToLower() + " " + emp.LastName.ToLower()).Contains(name.ToLower())).ToList();
-                //var queryEmployee = context.Employees.Where(emp => emp.FirstName.ToLower().Contains(name.ToLower()) || emp.LastName.ToLower().Contains(name.ToLower())).ToList();
                 return queryEmployee;
             }
         }
